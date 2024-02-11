@@ -45,6 +45,7 @@ def songs_update():
         {
             "file": str(song.file.stem),
             "file_original": str(song.file),
+            "duration": song.duration,
         }
         for song in songs_models
     ]

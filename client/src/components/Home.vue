@@ -67,6 +67,15 @@
                   v-model='uploadToTonie'>
                 <span class="form-checked-content">
                   <strong>{{ song.file }}</strong>
+                  <small class="text-muted">
+                    <svg class="bi me-1" width="1em" height="1em">
+                      <use xlink:href="#calendar-event"></use>
+                    </svg>
+                    
+                    {{ `${Math.floor((song.duration % 3600) / 60)
+                      .toString()
+                      .padStart(2, '0')}:${Math.floor(song.duration % 60).toString().padStart(2, '0')}` }}
+                  </small>
                 </span>
               </label>
             </div>

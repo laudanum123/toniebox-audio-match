@@ -17,6 +17,7 @@ class AudioTrack:
     album: str
     title: str
     track: int
+    duration: float
     file: Path
 
     @classmethod
@@ -27,6 +28,7 @@ class AudioTrack:
                 album=tag.album,
                 title=tag.title,
                 track=tag.track,
+                duration=tag.duration,
                 file=path,
             )
         except Exception as e:
