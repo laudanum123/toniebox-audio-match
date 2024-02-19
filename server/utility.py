@@ -59,6 +59,17 @@ def get_creative_tonies():
 
 
 def get_item_from_request(req_json, item_key, items):
+    """
+    Retrieves items from a request JSON based on the provided item key and matches them with the given list of items.
+
+    Args:
+        req_json (dict): The request JSON object.
+        item_key (str): The key to retrieve the item IDs from the request JSON.
+        items (list): The list of items to match against.
+
+    Returns:
+        list or None: A list of matched items, or None if no matches were found.
+    """
     item_ids = req_json.get(item_key, [])
     if not isinstance(item_ids, list):
         item_ids = [item_ids]
