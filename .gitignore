@@ -360,3 +360,5 @@ dmypy.json
 albumart/
 # End of https://www.toptal.com/developers/gitignore/api/node,python,pycharm
 
+.vscode/settings.json
+server/pytest.ini
